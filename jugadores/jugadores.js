@@ -18,3 +18,22 @@ function crearJugador(id, nombre, pais, posicion, urlImagen, urlBandera, colorFo
         desbloqueado: false
     };
 }
+
+function renderizarAlbum(listaJugadores) {
+    const contenedor = document.getElementById("contenedorAlbum");
+
+    contenedor.innerHTML = "";
+
+    listaJugadores.forEach(function(jugador) {
+        contenedor.innerHTML += `
+            <div class="card-cromo" style="background-color: ${jugador.colorFondoHex}">
+                <img src="${jugador.urlImagen}" alt="${jugador.nombre}">
+                <h2>${jugador.nombre}</h2>
+                <p>${jugador.pais}</p>
+                <p>${jugador.posicion}</p>
+                <p>Goles: ${jugador.estadisticas.goles}</p>
+                <p>Partidos: ${jugador.estadisticas.partidos}</p>
+            </div>
+        `;
+    });
+}
