@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Álbum Mundialista</title>
+    <link rel="stylesheet" href="jugadores.css">
+</head>
+<body>
+
+    <header>
+        <h1>Álbum Virtual Mundialista</h1>
+        <p id="contadorCromos">Cromos desbloqueados: 0%</p>
+    </header>
+
+    <section class="herramientas">
+        <input type="text" id="buscador" placeholder="Buscar jugador...">
+
+        <select id="filtroPais">
+            <option value="">Todos los países</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Países Bajos">Países Bajos</option>
+            <option value="Inglaterra">Inglaterra</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Francia">Francia</option>
+        </select>
+    </section>
+
+    <main id="contenedorAlbum">
+        <!-- Aquí JavaScript va a insertar las tarjetas -->
+    </main>
+
+    <script src="jugadores.js"></script>
+</body>
+</html>
