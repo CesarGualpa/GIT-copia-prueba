@@ -244,6 +244,231 @@ cromosMundial.push(
     )
 );
 
+// =====================================================
+// DATOS DEL ESTUDIANTE C
+// GRUPO C Y GRUPO I
+// =====================================================
+
+// IMPORTANTE:
+// Como Estudiante C debes agregar 6 jugadores en total.
+// No son 6 por país.
+// Son 6 jugadores repartidos entre el Grupo C y el Grupo I.
+
+// Usa IDs del 7 al 12.
+// Esto evita que tus IDs choquen con los del Estudiante B,
+// quien normalmente usa IDs del 1 al 6.
+
+
+// =====================================================
+// JUGADOR 7
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        7, // id único del jugador
+
+        "NOMBRE DEL JUGADOR 7", // nombre real del jugador
+
+        "PAÍS DEL JUGADOR 7", // país del Grupo C o Grupo I
+
+        "POSICIÓN DEL JUGADOR 7", // ejemplo: Arquero, Defensa, Mediocampista, Delantero
+
+        "img/nombre-jugador-7.jpg", // imagen del jugador guardada en la carpeta img
+
+        "img/bandera-pais-7.png", // imagen de la bandera guardada en la carpeta img
+
+        "#000000", // color representativo del país en hexadecimal
+
+        0, // cantidad de goles del jugador
+
+        0, // cantidad de partidos jugados
+
+        false, // true si es destacado, false si no es destacado
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 7."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 8
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        8,
+
+        "NOMBRE DEL JUGADOR 8",
+
+        "PAÍS DEL JUGADOR 8",
+
+        "POSICIÓN DEL JUGADOR 8",
+
+        "img/nombre-jugador-8.jpg",
+
+        "img/bandera-pais-8.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 8."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 9
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        9,
+
+        "NOMBRE DEL JUGADOR 9",
+
+        "PAÍS DEL JUGADOR 9",
+
+        "POSICIÓN DEL JUGADOR 9",
+
+        "img/nombre-jugador-9.jpg",
+
+        "img/bandera-pais-9.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 9."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 10
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        10,
+
+        "NOMBRE DEL JUGADOR 10",
+
+        "PAÍS DEL JUGADOR 10",
+
+        "POSICIÓN DEL JUGADOR 10",
+
+        "img/nombre-jugador-10.jpg",
+
+        "img/bandera-pais-10.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 10."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 11
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        11,
+
+        "NOMBRE DEL JUGADOR 11",
+
+        "PAÍS DEL JUGADOR 11",
+
+        "POSICIÓN DEL JUGADOR 11",
+
+        "img/nombre-jugador-11.jpg",
+
+        "img/bandera-pais-11.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 11."
+    )
+);
+
+
+// =====================================================
+// JUGADOR 12
+// =====================================================
+
+cromosMundial.push(
+    crearJugador(
+        12,
+
+        "NOMBRE DEL JUGADOR 12",
+
+        "PAÍS DEL JUGADOR 12",
+
+        "POSICIÓN DEL JUGADOR 12",
+
+        "img/nombre-jugador-12.jpg",
+
+        "img/bandera-pais-12.png",
+
+        "#000000",
+
+        0,
+
+        0,
+
+        false,
+
+        "ESCRIBE AQUÍ UNA CURIOSIDAD HISTÓRICA O ESTADÍSTICA DEL JUGADOR 12."
+    )
+);
+
+// =====================================================
+// FUNCIÓN DEL ESTUDIANTE C
+// CALCULAR TOTAL DE GOLES DE SUS JUGADORES
+// =====================================================
+
+function calcularTotalGolesEstudianteC() {
+
+    // Aquí filtramos solo los jugadores del Estudiante C.
+    // Como tus IDs son del 7 al 12, usamos esa condición.
+    const jugadoresEstudianteC = cromosMundial.filter(function(jugador) {
+        return jugador.id >= 7 && jugador.id <= 12;
+    });
+
+    let totalGoles = 0;
+
+    jugadoresEstudianteC.forEach(function(jugador) {
+        totalGoles = totalGoles + jugador.estadisticas.goles;
+    });
+
+    const elementoTotal = document.getElementById("totalGolesEstudianteC");
+
+    if (elementoTotal !== null) {
+        elementoTotal.textContent = totalGoles;
+    }
+}
 
 // =====================================================
 // FUNCIÓN PARA RENDERIZAR EL ÁLBUM
@@ -338,4 +563,5 @@ function renderizarAlbum(listaJugadores = cromosMundial) {
 // EJECUCIÓN INICIAL
 // =====================================================
 
+renderizarAlbum();
 renderizarAlbum();
